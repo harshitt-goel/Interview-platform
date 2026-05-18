@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from app.database.db import engine, Base
 from app.models.user_model import User
 from app.routes.resume_routes import router as resume_router
+from app.routes.interview_routes import router as interview_router
 
 from app.routes.auth_routes import router as auth_router
 from app.routes.user_routes import router as user_router
@@ -14,6 +15,7 @@ app = FastAPI()
 app.include_router(auth_router)
 app.include_router(user_router)
 app.include_router(resume_router)
+app.include_router(interview_router)
 
 @app.get("/")
 def home():
