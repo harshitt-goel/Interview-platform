@@ -37,3 +37,34 @@ def generate_interview_questions(
     )
 
     return response.text
+
+
+def generate_feedback(
+    questions,
+    answers
+):
+
+    prompt = f"""
+    You are an expert technical interviewer.
+
+    Interview Questions:
+    {questions}
+
+    Candidate Answers:
+    {answers}
+
+    Evaluate the candidate.
+
+    Provide:
+    - strengths
+    - weaknesses
+    - technical evaluation
+    - communication evaluation
+    - improvement suggestions
+
+    Also provide a score out of 100.
+    """
+
+    response = model.generate_content(prompt)
+
+    return response.text
