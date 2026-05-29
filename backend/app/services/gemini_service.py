@@ -20,7 +20,20 @@ def generate_interview_questions(
 
     {resume_text}
 
-    Generate 10 interview questions
+    Generate exactly 10 interview questions.
+
+    Rules:
+    - Return ONLY the questions.
+    - No introduction.
+    - No explanation.
+    - No heading.
+    - No closing statement.
+    - Number each question.
+
+    Example:
+
+    1. Question...
+    2. Question...
     for the role: {role}
 
     Include:
