@@ -34,17 +34,17 @@ export const getCurrentUser = async () => {
 // ─── Profile ─────────────────────────────────────────────────────────────────
 
 export const getProfile = async (): Promise<Profile> => {
-  const res = await api.get("/profile");
+  const res = await api.get("/profile/");
   return res.data;
 };
 
 export const createProfile = async (data: ProfileRequest): Promise<Profile> => {
-  const res = await api.post("/profile", data);
+  const res = await api.post("/profile/", data);
   return res.data;
 };
 
 export const updateProfile = async (data: ProfileRequest): Promise<Profile> => {
-  const res = await api.put("/profile", data);
+  const res = await api.put("/profile/", data);
   return res.data;
 };
 
