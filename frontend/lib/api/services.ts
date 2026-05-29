@@ -115,11 +115,11 @@ export const getProgress = async (): Promise<Progress> => {
 };
 
 export const completeTask = async (taskId: string): Promise<void> => {
-  await api.post("/progress/complete", { task_id: taskId });
+  await api.post("/progress/complete", { task_name: taskId });
 };
 
 export const uncompleteTask = async (taskId: string): Promise<void> => {
-  await api.post("/progress/uncomplete", { task_id: taskId });
+  await api.post("/progress/uncomplete", { task_name: taskId });
 };
 
 export const getDashboard = async (): Promise<DashboardData> => {
