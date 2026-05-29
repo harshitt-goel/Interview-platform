@@ -118,37 +118,25 @@ export default function ProfilePage() {
   const {
   register,
   handleSubmit,
-  reset,
   formState: { errors, isDirty },
 } = useForm<FormData>({
   resolver: zodResolver(schema),
-  defaultValues: {
-    target_role: "",
-    domain: "",
-    current_level: "",
-    target_company: "",
-    github_url: "",
-    leetcode_url: "",
-    codeforces_url: "",
-  },
+
+  values: profile
+    ? {
+        target_role: profile.target_role ?? "",
+        domain: profile.domain ?? "",
+        current_level: profile.current_level ?? "",
+        target_company: profile.target_company ?? "",
+        github_url: profile.github_url ?? "",
+        leetcode_url: profile.leetcode_url ?? "",
+        codeforces_url: profile.codeforces_url ?? "",
+      }
+    : undefined,
 });
 
   // Pre-fill form when profile loads
-  useEffect(() => {
-  console.log("PROFILE FROM API:", profile);
-
-  if (!profile) return;
-
-  reset({
-    target_role: profile.target_role || "",
-    domain: profile.domain || "",
-    current_level: profile.current_level || "",
-    target_company: profile.target_company || "",
-    github_url: profile.github_url || "",
-    leetcode_url: profile.leetcode_url || "",
-    codeforces_url: profile.codeforces_url || "",
-  });
-}, [profile, reset]);
+  
 
   const { mutate, isPending } = useMutation({
     mutationFn: (data: ProfileRequest) =>
@@ -204,11 +192,7 @@ export default function ProfilePage() {
         </div>
       )}
 
-      <div className="bg-red-900 text-white p-3 rounded mb-4">
-        <div>Role: {profile?.target_role}</div>
-        <div>Domain: {profile?.domain}</div>
-        <div>Level: {profile?.current_level}</div>
-      </div>
+      
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
         {/* Card: Placement goals */}
