@@ -9,10 +9,13 @@ from app.utils.current_user import get_current_user
 from app.utils.pdf_extractor import extract_text_from_pdf
 from app.models.resume_model import Resume
 
-router = APIRouter()
+router = APIRouter(
+    prefix="/resume",
+    tags=["Resume"]
+)
 
 
-@router.post("/upload-resume")
+@router.post("/upload")
 def upload_resume(
     file: UploadFile = File(...),
     db: Session = Depends(get_db),
@@ -63,7 +66,7 @@ def upload_resume(
     }
 
 
-@router.get("/resume")
+@router.get("/")
 def get_resume(
     db: Session = Depends(get_db),
     current_user=Depends(get_current_user)
