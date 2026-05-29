@@ -76,7 +76,7 @@ export default function RecentInterviews() {
           {recent.map((session) => (
             <Link
               key={session.id}
-              href={`/interview/${session.id}/feedback`}
+              href={`/dashboard/interview/${session.id}/feedback`}
               className="flex items-center justify-between py-2.5 px-2 rounded-lg hover:bg-gray-800/50 transition group"
             >
               <div className="min-w-0">

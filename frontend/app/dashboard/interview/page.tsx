@@ -37,7 +37,7 @@ export default function InterviewPage() {
     mutationFn: (role: string) => generateInterview(role),
     onSuccess: (session) => {
       queryClient.invalidateQueries({ queryKey: ["interviews"] });
-      router.push(`/interview/${session.id}`);
+      router.push(`/dashboard/interview/${session.id}`);
     },
     onError: (err: unknown) => {
       const msg =
@@ -181,8 +181,8 @@ export default function InterviewPage() {
                 key={session.id}
                 href={
                   session.submitted
-                    ? `/interview/${session.id}/feedback`
-                    : `/interview/${session.id}`
+                    ? `/dashboard/interview/${session.id}/feedback`
+                    : `/dashboard/interview/${session.id}`
                 }
                 className="flex items-center justify-between bg-gray-900 border border-gray-800 hover:border-gray-700 rounded-xl p-4 transition group"
               >

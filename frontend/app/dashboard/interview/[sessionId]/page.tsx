@@ -24,14 +24,14 @@ export default function InterviewSessionPage() {
   // If already submitted, redirect to feedback
   useEffect(() => {
     if (session?.submitted) {
-      router.replace(`/interview/${id}/feedback`);
+      router.replace(`/dashboard/interview/${id}/feedback`);
     }
   }, [session, id, router]);
 
   const { mutate: submit, isPending: submitting } = useMutation({
     mutationFn: (data: AnswerSubmission[]) => submitAnswers(id, data),
     onSuccess: () => {
-      router.push(`/interview/${id}/feedback`);
+      router.push(`/dashboard/interview/${id}/feedback`);
     },
     onError: (err: unknown) => {
       const msg =
