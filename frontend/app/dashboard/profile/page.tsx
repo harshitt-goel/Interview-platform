@@ -116,26 +116,39 @@ export default function ProfilePage() {
   const isNew = !profile;
 
   const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors, isDirty },
-  } = useForm<FormData>({ resolver: zodResolver(schema) });
+  register,
+  handleSubmit,
+  reset,
+  formState: { errors, isDirty },
+} = useForm<FormData>({
+  resolver: zodResolver(schema),
+  defaultValues: {
+    target_role: "",
+    domain: "",
+    current_level: "",
+    target_company: "",
+    github_url: "",
+    leetcode_url: "",
+    codeforces_url: "",
+  },
+});
 
   // Pre-fill form when profile loads
   useEffect(() => {
-    if (profile) {
-      reset({
-        target_role: profile.target_role,
-        domain: profile.domain,
-        current_level: profile.current_level,
-        target_company: profile.target_company ?? "",
-        github_url: profile.github_url ?? "",
-        leetcode_url: profile.leetcode_url ?? "",
-        codeforces_url: profile.codeforces_url ?? "",
-      });
-    }
-  }, [profile, reset]);
+  console.log("PROFILE FROM API:", profile);
+
+  if (!profile) return;
+
+  reset({
+    target_role: profile.target_role || "",
+    domain: profile.domain || "",
+    current_level: profile.current_level || "",
+    target_company: profile.target_company || "",
+    github_url: profile.github_url || "",
+    leetcode_url: profile.leetcode_url || "",
+    codeforces_url: profile.codeforces_url || "",
+  });
+}, [profile, reset]);
 
   const { mutate, isPending } = useMutation({
     mutationFn: (data: ProfileRequest) =>
