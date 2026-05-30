@@ -77,6 +77,8 @@ export interface Roadmap {
   role: string;
   phases: Phase[];
   created_at: string;
+  needs_regeneration?: boolean;
+  current_profile_role?: string;
 }
 
 // ─── Interview ───────────────────────────────────────────────────────────────
