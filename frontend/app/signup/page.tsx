@@ -47,7 +47,7 @@ export default function SignupPage() {
       setAuth(res.user, res.access_token);
       document.cookie = `placementor-token=${res.access_token}; path=/; max-age=${60 * 60 * 24 * 7}`;
       // New users go to profile setup first
-      router.push("/profile");
+      router.push("/dashboard/profile");
     } catch (err: unknown) {
       const msg =
         (err as { response?: { data?: { detail?: string } } })?.response?.data?.detail ||
