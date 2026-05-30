@@ -1,0 +1,73 @@
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="c">
+      <rect x="60" y="60" width="680" height="680" rx="96"/>
+    </clipPath>
+  </defs>
+
+  <!-- Base square -->
+  <rect x="60" y="60" width="680" height="680" rx="96" fill="#060f1e"/>
+
+  <!-- Dot grid -->
+  <g clip-path="url(#c)" fill="#1a2d4a">
+    <circle cx="120" cy="120" r="2.5"/><circle cx="186" cy="120" r="2.5"/><circle cx="252" cy="120" r="2.5"/><circle cx="318" cy="120" r="2.5"/><circle cx="384" cy="120" r="2.5"/><circle cx="450" cy="120" r="2.5"/><circle cx="516" cy="120" r="2.5"/><circle cx="582" cy="120" r="2.5"/><circle cx="648" cy="120" r="2.5"/>
+    <circle cx="120" cy="186" r="2.5"/><circle cx="186" cy="186" r="2.5"/><circle cx="252" cy="186" r="2.5"/><circle cx="318" cy="186" r="2.5"/><circle cx="384" cy="186" r="2.5"/><circle cx="450" cy="186" r="2.5"/><circle cx="516" cy="186" r="2.5"/><circle cx="582" cy="186" r="2.5"/><circle cx="648" cy="186" r="2.5"/>
+    <circle cx="120" cy="252" r="2.5"/><circle cx="186" cy="252" r="2.5"/><circle cx="252" cy="252" r="2.5"/><circle cx="318" cy="252" r="2.5"/><circle cx="384" cy="252" r="2.5"/><circle cx="450" cy="252" r="2.5"/><circle cx="516" cy="252" r="2.5"/><circle cx="582" cy="252" r="2.5"/><circle cx="648" cy="252" r="2.5"/>
+    <circle cx="120" cy="318" r="2.5"/><circle cx="186" cy="318" r="2.5"/><circle cx="252" cy="318" r="2.5"/><circle cx="318" cy="318" r="2.5"/><circle cx="384" cy="318" r="2.5"/><circle cx="450" cy="318" r="2.5"/><circle cx="516" cy="318" r="2.5"/><circle cx="582" cy="318" r="2.5"/><circle cx="648" cy="318" r="2.5"/>
+    <circle cx="120" cy="384" r="2.5"/><circle cx="186" cy="384" r="2.5"/><circle cx="252" cy="384" r="2.5"/><circle cx="318" cy="384" r="2.5"/><circle cx="384" cy="384" r="2.5"/><circle cx="450" cy="384" r="2.5"/><circle cx="516" cy="384" r="2.5"/><circle cx="582" cy="384" r="2.5"/><circle cx="648" cy="384" r="2.5"/>
+    <circle cx="120" cy="450" r="2.5"/><circle cx="186" cy="450" r="2.5"/><circle cx="252" cy="450" r="2.5"/><circle cx="318" cy="450" r="2.5"/><circle cx="384" cy="450" r="2.5"/><circle cx="450" cy="450" r="2.5"/><circle cx="516" cy="450" r="2.5"/><circle cx="582" cy="450" r="2.5"/><circle cx="648" cy="450" r="2.5"/>
+    <circle cx="120" cy="516" r="2.5"/><circle cx="186" cy="516" r="2.5"/><circle cx="252" cy="516" r="2.5"/><circle cx="318" cy="516" r="2.5"/><circle cx="384" cy="516" r="2.5"/><circle cx="450" cy="516" r="2.5"/><circle cx="516" cy="516" r="2.5"/><circle cx="582" cy="516" r="2.5"/><circle cx="648" cy="516" r="2.5"/>
+    <circle cx="120" cy="582" r="2.5"/><circle cx="186" cy="582" r="2.5"/><circle cx="252" cy="582" r="2.5"/><circle cx="318" cy="582" r="2.5"/><circle cx="384" cy="582" r="2.5"/><circle cx="450" cy="582" r="2.5"/><circle cx="516" cy="582" r="2.5"/><circle cx="582" cy="582" r="2.5"/><circle cx="648" cy="582" r="2.5"/>
+    <circle cx="120" cy="648" r="2.5"/><circle cx="186" cy="648" r="2.5"/><circle cx="252" cy="648" r="2.5"/><circle cx="318" cy="648" r="2.5"/><circle cx="384" cy="648" r="2.5"/><circle cx="450" cy="648" r="2.5"/><circle cx="516" cy="648" r="2.5"/><circle cx="582" cy="648" r="2.5"/><circle cx="648" cy="648" r="2.5"/>
+  </g>
+
+  <!-- Corner brackets -->
+  <g stroke="#1e4fa8" stroke-width="3" fill="none">
+    <polyline points="80,110 80,82 108,82"/>
+    <polyline points="720,110 720,82 692,82"/>
+    <polyline points="80,690 80,718 108,718"/>
+    <polyline points="720,690 720,718 692,718"/>
+  </g>
+
+  <!-- BIG P -->
+  <!-- stem -->
+  <rect x="112" y="130" width="68" height="318" rx="10" fill="#3b82f6"/>
+  <!-- top bar -->
+  <rect x="112" y="130" width="300" height="68" rx="10" fill="#3b82f6"/>
+  <!-- right wall -->
+  <rect x="344" y="130" width="68" height="206" rx="10" fill="#3b82f6"/>
+  <!-- bottom bar of bowl -->
+  <rect x="112" y="268" width="300" height="68" rx="10" fill="#3b82f6"/>
+  <!-- hollow cutout -->
+  <rect x="180" y="198" width="164" height="138" rx="6" fill="#060f1e"/>
+
+  <!-- Precision vertex dots -->
+  <g fill="#60a5fa">
+    <circle cx="112" cy="130" r="7"/>
+    <circle cx="412" cy="130" r="7"/>
+    <circle cx="412" cy="336" r="7"/>
+    <circle cx="180" cy="336" r="7"/>
+    <circle cx="112" cy="448" r="7"/>
+    <circle cx="180" cy="448" r="7"/>
+  </g>
+
+  <!-- Divider line -->
+  <line x1="108" y1="480" x2="692" y2="480" stroke="#111e35" stroke-width="1.5"/>
+
+  <!-- WORDMARK: Placementor — Place white, mentor blue -->
+  <text x="112" y="610"
+    font-family="'Courier New', Courier, monospace"
+    font-size="88" font-weight="700"
+    fill="#e2e8f0"
+    letter-spacing="-2">Place</text>
+
+  <!-- mentor continues inline. "Place" at 88px Courier ≈ 5 chars × ~53px = ~265px, start mentor at 112+265=377 -->
+  <text x="377" y="610"
+    font-family="'Courier New', Courier, monospace"
+    font-size="88" font-weight="700"
+    fill="#3b82f6"
+    letter-spacing="-2">mentor</text>
+
+  <!-- Outer border -->
+  <rect x="60" y="60" width="680" height="680" rx="96" fill="none" stroke="#1a3460" stroke-width="2"/>
+</svg>
